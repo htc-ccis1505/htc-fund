@@ -1,0 +1,45 @@
+---
+title:  Semesters
+layout: semester
+---
+
+
+{% assign current_found = false %}
+{% for course in site.courses %} 
+  {% if forloop.length == 1 or current_found == false and course.isCurrent == true %}
+    {% assign current_found = true %}    
+    {% assign current_course = course %}
+  {% endif %}
+{% endfor %}
+
+{% if current_found %}
+<h2 style="clear:both;">Current Course</h2>
+    <p>
+        <a href="{{ current_course.url | prepend:site.baseurl}}" class="post-title-archive">
+            {{ current_course.title }}
+        </a>
+    </p>
+{% endif %}
+
+{% if site.courses.size > 1 %}
+
+    {% if current_found %}
+      <h2 style="clear:both;">All Courses</h2>
+    {% else %}
+      <h2 style="clear:both;">Other Courses</h2>
+    {% endif %}
+
+    <p>
+        <div class="page-archive">
+        {% for course in site.courses reversed %}
+          {% unless course.isCurrent == true %}
+          <p>
+            <a href="{{ course.url | prepend:site.baseurl}}" class="post-title-archive">
+              {{ course.title }}
+            </a>
+          </p>
+          {% endunless %}
+        {% endfor %}
+        </div>
+    </p>
+{% endif %}

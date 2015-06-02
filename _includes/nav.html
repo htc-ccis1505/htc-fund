@@ -1,0 +1,79 @@
+<!-- Nav Bar -->
+{% if site.data.theme.color == "default" %}
+<div class="navbar navbar-default navbar-static-top">
+{% else %}
+<div class="navbar navbar-inverse navbar-static-top">
+    {% endif %}
+    <div class="container">
+        <div class="navbar-header">
+            <div class="navbar-toggle-wrapper visible-xs">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".js-navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <a href="{{ "/" | prepend:site.baseurl }}" class="navbar-brand">{{ site.title }}</a>
+        </div>
+
+        <div class="collapse navbar-collapse js-navbar-collapse">
+            <ul class="navbar-nav nav">
+
+                <!-- Start Semester Nav items  -->
+                {% assign current_found = false %}
+                {% for item in site.semesters %}
+                    {% if forloop.length == 1 or current_found == false and item.isCurrent == true %}
+                        {% assign current_found = true %}
+                        {% assign current = item %}
+                    {% endif %}
+                {% endfor %}
+
+                <!-- Current Course Link -->
+                {% if current_found %}
+                <li><a href="{{ current.url | prepend:site.baseurl}}">
+                            {{ current.title }}
+                    </a>
+                </li>
+                {% endif %}
+
+                <!-- Other Semesters -->
+                {% if site.semesters.size > 1 %}
+                <li class="dropdown">
+                    <a id="drop1" href="#" class="dropdown-toggle" data-toggle="dropdown"
+                       aria-haspopup="true" role="button" aria-expanded="false">
+                        {% if current_found %}
+                            Other Semesters
+                        {% else %}
+                            All Semesters
+                        {% endif %}
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="drop1">
+                    {% for item in site.semesters reversed %}
+                        {% unless item.isCurrent == true %}
+                        <li role="presentation">
+                            <a href="{{ item.url | prepend:site.baseurl}}" role="menuitem" tabindex="-1">
+                                {{ item.title }}
+                            </a>
+                        </li>
+                        {% endunless %}
+                    {% endfor %}
+                    </ul>
+                </li>
+                {% endif %}
+
+                <!-- End Semester Nav items  -->
+
+                <!-- Other Nav items  -->
+                <li><a href="http://htc-ccis1505.github.io/main-labs/" target="_blank">Labs</a></li>
+                <li><a href="{{ "/about" | prepend:site.baseurl }}">About</a></li>
+
+                <!-- End Nav items -->
+            </ul>
+            <ul class="navbar-nav nav navbar-right">
+                {% include nav-right.html %}
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- End Nav Bar -->

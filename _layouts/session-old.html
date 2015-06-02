@@ -1,0 +1,62 @@
+---
+layout: page
+---
+
+
+<div class="session-content">
+
+    {% if page.intro %}
+    <p>{{ page.intro | markdownify }}</p>
+    {% endif %}
+
+    {% if page.key-skills %}
+    <h2>Key Skills</h2>
+    <div id="key-skills">
+        <p>At the end of this session you should be able to:</p>
+        <ul>
+            {% for key in page.key-skills %}
+            <li>{{ key | markdownify }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    {{ content }}
+
+    {% if page.topics %}
+    <section id="topics">
+
+        <h2>Topics</h2>
+        <hr>
+        {% if page.topics.size > 1 %}
+        <ul class="pager">
+            <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Previous</a></li>
+            <li class="next"><a href="#">Next <span aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+        {% endif %}
+
+        {% for topic_name in page.topics %}
+            {% assign section_number = forloop.index %}
+            {% assign page_found = false %}
+            {% for item in site.topics %}
+                {% if page_found == false and item.name == topic_name %}
+                    {% assign page_found = true %}
+                    <article id="{{item.name}}" {% unless section_number == 1 %} class="hidden" {% endunless %}>
+                        <h3>{{item.title}}</h3>
+                        <div class="topic-content">
+                        </div>
+                    </article>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+
+        {% if page.topics.size > 1 %}
+        <ul class="pager">
+            <li class="previous disabled"><a href="#"><span aria-hidden="true">&larr;</span> Previous</a></li>
+            <li class="next"><a href="#">Next <span aria-hidden="true">&rarr;</span></a></li>
+        </ul>
+        {% endif %}
+    </section>
+    {% endif %}
+
+</div>

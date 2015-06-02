@@ -1,0 +1,11 @@
+
+<script src="{{ "/javascripts/jquery.min.js" | prepend:site.baseurl }}"></script>
+<script src="{{ "/javascripts/bootstrap.min.js" | prepend:site.baseurl }}"></script>
+
+<!-- Place your <script> tags here. -->
+<script src="{{ "/javascripts/gist-async.js" | prepend:site.baseurl }}"></script>
+<script src="{{ "/javascripts/jquery.history.js" | prepend:site.baseurl }}"></script>
+
+{% if page.collection == 'sessions' %}
+<script src="{{ "/javascripts/session.js" | prepend:site.baseurl }}"></script>
+{% endif %}

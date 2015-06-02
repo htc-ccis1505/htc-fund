@@ -1,0 +1,10 @@
+.DS_store
+_site
+.sass-cache
+*~
+._*
+*#*#*
+*Thumbs.db*
+ehthumbs.db
+.Spotlight-V100
+.Trashes

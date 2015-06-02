@@ -1,0 +1,53 @@
+---
+layout: page
+---
+
+
+<div class="session-content">
+
+    {% if page.intro %}
+    <p>{{ page.intro | markdownify }}</p>
+    {% endif %}
+
+    {% if page.due %}
+    <h2>Due Dates</h2>
+    <ul class="due">
+        {% for item in page.due %}
+        <li class="assgn">
+            <span class="due-date">{{ item.date }}</span> -
+        {% if item.file %}
+        <!-- With file -->
+        {% assign page_found = false %}
+        {% for assgn_page in site.assignments %}
+            {% if page_found == false and assgn_page.name == item.file %}
+                {% assign page_found = true %}
+                <a href="{{ assgn_page.url | prepend:site.baseurl }}">
+                  {{ item.name }}: {{ assgn_page.title }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% else %}
+        <!-- Without file -->
+            {{ item.name }}
+        {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if page.key-skills %}
+    <h2>Key Skills</h2>
+    <div id="key-skills">
+        <p>At the end of this session you should be able to:</p>
+        <ul>
+            {% for key in page.key-skills %}
+            <li>{{ key | markdownify }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+    <div id="content">
+        {{ content }}
+    </div>
+</div>

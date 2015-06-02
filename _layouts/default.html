@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+    
+  <body>  
+      
+    {% include nav.html %}
+    
+    <!-- Content Area -->
+    <div class="container">
+      <div class="row">
+        {{ content }}
+      </div>
+        
+      {% include footer.html %}
+        
+    </div>
+        
+    {% include scripts.html %}
+        
+  </body>
+</html>

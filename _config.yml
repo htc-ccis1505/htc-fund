@@ -1,0 +1,56 @@
+baseurl: "/main" # The subpath of your site. Use "" if you're hosting a blog at the root level.
+url: "http://htc-ccis1505.github.io/" # the base hostname & protocol for your site
+title: "CCIS 1505 Fund of Prog"
+
+gems:
+  - jemoji
+
+exclude:
+  - "README.md"
+  - "Gemfile"
+  - "Gemfile.lock"
+
+permalink: :title
+
+collections:
+  semesters:
+    output: true
+  sessions:
+    output: true
+  topics:
+    output: true
+  assignments:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  -
+    scope:
+      path: ""
+      type: "semesters"
+    values:
+      layout: "semester"
+      hide_sidebar: true
+  -
+    scope:
+      path: ""
+      type: "sessions"
+    values:
+      layout: "session"
+  -
+    scope:
+      path: ""
+      type: "assignments"
+    values:
+      layout: "page"

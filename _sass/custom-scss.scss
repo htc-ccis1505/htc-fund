@@ -1,0 +1,44 @@
+// Add your own custom CSS here.
+@import "pygments-tomorrow";
+
+.post-content img,
+.post-excerpt-home img,
+.post-nav img {
+  @extend .img-rounded;
+}
+.post-content table,
+.post-excerpt-home table,
+.post-nav table {
+  @extend .table;
+  @extend .table-bordered;
+}
+
+
+#htc-button {
+    background-image: url(../assets/htc-logo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 34px;
+    margin-top: 14px;
+}
+
+#htc-button:hover {
+    border-color: #464646;
+}
+
+div.sidebar {
+    padding-left: 30px;
+}
+
+.session > h2:first-child, .tab-pane > h2:first-child {
+    margin-top: 5px;
+}
+
+.session-content {
+    margin-bottom: 30px;
+}
+
+img.emoji {
+    display: inline;
+}
