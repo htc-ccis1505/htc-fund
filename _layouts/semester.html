@@ -17,7 +17,7 @@ layout: page
         {% assign current_session_page = false %}
     <tr>
         <td>
-            <!-- In Class -->
+            <!-- Class -->
             {% if session.class %}
             <div class="date">{{ session.class.date }}</div>
 
@@ -36,31 +36,37 @@ layout: page
             {% endif %}
         </td>
         <td>
-            <!-- Due Dates -->
-            {% if current_session_page.due %}
-            <ul class="due">
-                {% for item in current_session_page.due %}
-                <li class="assgn">
-                    <span class="due-date">{{ item.date }}</span> -
-                {% if item.file %}
-                <!-- With file -->
+          <!-- Due Dates -->
+          {% if current_session_page.due %}
+          <ul class="due">
+              {% for item in current_session_page.due %}
+              <li class="assgn">
+                  <span class="due-date">{{ item.date }}</span> -
+              {% if item.file %}
                 {% assign page_found = false %}
                 {% for assgn_page in site.assignments %}
                     {% if page_found == false and assgn_page.name == item.file %}
+                        <!-- With file -->
                         {% assign page_found = true %}
                         <a href="{{ assgn_page.url | prepend:site.baseurl }}">
                           {{ assgn_page.title }}</a>
                     {% endif %}
                 {% endfor %}
-
-                {% else %}
-                <!-- Without file -->
+                {% unless page_found %}
+                    <!-- Missing file -->
                     {{ item.name }}
-                {% endif %}
-                </li>
-                {% endfor %}
-            </ul>
-            {% endif %}
+                {% endunless %}
+              {% elsif item.url %}
+                <!-- With file -->
+                <a href="{{ item.url }}">{{ item.name }}</a>
+              {% else %}
+              <!-- Without file -->
+                  {{ item.name }}
+              {% endif %}
+              </li>
+              {% endfor %}
+          </ul>
+          {% endif %}
         </td>
 
     </tr>
