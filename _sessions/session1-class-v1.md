@@ -12,7 +12,7 @@ due:
     date: June 4
     name: Check-off for Labs 1 & 2
   -
-    date: June 4
+    date: June 9
     name: Assignment 1
     file: intro-snap-v1
 
