@@ -1,5 +1,5 @@
 ---
-title: Practice with Snap!
+title: Guessing Game
 name:  guessing-game-v1
 ---
 
