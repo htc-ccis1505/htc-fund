@@ -10,11 +10,13 @@ Collaboration Policy: This assignment must be completed individually.  You may d
 In lab, you worked on scripts to make the bug dance and draw flowers. Choose one of those scripts to expand on further for this assignment. Take some time to review and practice what you have learned while fancying it up.
 
 ## Requirements
-Your updated script must be different than your final lab script and should :
-Illustrate the use of custom blocks for composition
-Use custom blocks that take input to control behavior
-Make use of the random block
-Be well organized and easy to read (use good block and input names)
+Your updated script must be different than your final lab script and should:
+
+- Start when the green flag is clicked.  Use a the hat block to make this happen.
+- Illustrate the use of custom blocks for composition
+- Use custom blocks that take input to control behavior
+- Make use of the random block
+- Be well organized and easy to read (use good block and input names)
 
 ## Starting Materials
 You should start from your Lab 2 Snap! script.  Choose either the bug-dance or field-of-flowers.
