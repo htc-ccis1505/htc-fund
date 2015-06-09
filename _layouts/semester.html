@@ -10,7 +10,7 @@ layout: page
 <table id="sched">
     <tr>
         <th>Class</th>
-        <th>Key Due Dates</th>
+        <th>Due Dates</th>
     </tr>
 
     {% for session in page.course_sessions %}
@@ -24,7 +24,7 @@ layout: page
             {% if session.class.file %}
                 {% assign page_found = false %}
                 {% for session_page in site.sessions %}
-                    {% if page_found == false and session_page.name == session.class.file %}
+                    {% if page_found == false and session_page.relative_path == session.class.file %}
                         {% assign page_found = true %}
                         {% assign current_session_page = session_page %}
                         <div class="assgn">
@@ -37,15 +37,15 @@ layout: page
         </td>
         <td>
           <!-- Due Dates -->
-          {% if current_session_page.due %}
+          {% if session.due %}
           <ul class="due">
-              {% for item in current_session_page.due %}
+              {% for item in session.due %}
               <li class="assgn">
                   <span class="due-date">{{ item.date }}</span> -
               {% if item.file %}
                 {% assign page_found = false %}
                 {% for assgn_page in site.assignments %}
-                    {% if page_found == false and assgn_page.name == item.file %}
+                    {% if page_found == false and assgn_page.relative_path == item.file %}
                         <!-- With file -->
                         {% assign page_found = true %}
                         <a href="{{ assgn_page.url | prepend:site.baseurl }}">

@@ -1,20 +1,7 @@
 ---
 title:  "Session 1: Introduction"
-name:   session1-class-v1
 
 intro: Welcome to the course!
-
-due:
-  -
-    date: June 6
-    name: GitHub Org Access Setup
-  -
-    date: June 4
-    name: Check-off for Labs 1 & 2
-  -
-    date: June 9
-    name: Assignment 1
-    file: intro-snap-v1
 
 key-skills:
   - access the GitHub course organization
@@ -25,6 +12,17 @@ key-skills:
   - use loops to repeat program code
   - write a Snap custom block
 
+reading:
+  -
+    name: Syllabus & Course Schedule
+
+assign:
+  -
+    name: GitHub Org Access Setup
+  -
+    name: Check-off for Lab 1
+  -
+    name: Practice with Snap!
 ---
 
 ## Summary

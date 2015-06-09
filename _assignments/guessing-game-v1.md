@@ -1,6 +1,5 @@
 ---
 title: Guessing Game
-name:  guessing-game-v1
 ---
 
 #Project 1: Word Guessing

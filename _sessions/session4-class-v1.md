@@ -1,5 +1,5 @@
 ---
-title:  "Session 4"
+title:  "Session 4: Lists"
 name:   session4-class-v1
 ---
 

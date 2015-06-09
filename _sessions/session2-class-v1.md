@@ -1,23 +1,5 @@
 ---
 title:  "Session 2: Composition & Conditionals"
-name:   session2-class-v1
-
-due:
-  -
-    date: June 9
-    name: Check-off for Lab 2 & Lab 3
-  -
-    date: June 9
-    name: Assignment 1
-    file: intro-snap-v1
-  -
-    date: June 11
-    name: Project 1
-    file: guessing-game-v1
-  -
-    date: June 11
-    name: Quiz
-
 
 key-skills:
   - use composition - custom blocks that use other custom blocks
@@ -28,6 +10,17 @@ key-skills:
   - explain what a variable is and how it is used
   - create and use variables in program code
 
+assign:
+  -
+    name: Check-off for Lab 2 & Lab 3
+  -
+    name: Assignment 1
+    file: intro-snap-v1
+  -
+    name: Project 1
+    file: guessing-game-v1
+  -
+    name: Quiz 1
 ---
 
 ## Summary

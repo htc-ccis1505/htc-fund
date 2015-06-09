@@ -47,6 +47,61 @@ layout: page
     </div>
     {% endif %}
 
+    <div class="row">
+      <div class="col col-md-6">
+        {% if page.assign %}
+        <h2>Assignments</h2>
+        <div id="assignments">
+          <ul class="due">
+              {% for item in page.assign %}
+              <li class="assgn">
+              {% if item.file %}
+                {% assign page_found = false %}
+                {% for assgn_page in site.assignments %}
+                    {% if page_found == false and assgn_page.name == item.file %}
+                        {% assign page_found = true %}
+                        <!-- With file -->
+                        <a href="{{ assgn_page.url | prepend:site.baseurl }}">{{ item.name }}</a>
+                    {% endif %}
+                {% endfor %}
+                {% unless page_found %}
+                <!-- Missing file -->
+                    {{ item.name }}
+                {% endunless %}
+              {% elsif item.url %}
+                <!-- With file -->
+                <a href="{{ item.url }}">{{ item.name }}</a>
+              {% else %}
+              <!-- Without file -->
+                {{ item.name }}
+              {% endif %}
+              </li>
+              {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="col col-md-6">
+        {% if page.reading %}
+        <h2>Reading</h2>
+        <div id="reading">
+            <ul>
+                {% for item in page.reading %}
+                <li>
+                {% if item.url %}
+                  <a href="{{ item.url }}">{{ item.name }}</a>
+                {% else %}
+                  {{ item.name }}
+                {% endif %}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
     <div id="content">
         {{ content }}
     </div>
