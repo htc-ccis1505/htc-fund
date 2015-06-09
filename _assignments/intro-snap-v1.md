@@ -12,7 +12,7 @@ In lab, you worked on scripts to make the bug dance and draw flowers. Choose one
 ## Requirements
 Your updated script must be different than your final lab script and should:
 
-- Start when the green flag is clicked.  Use a the hat block to make this happen.
+- Start when the green flag is clicked.  Use the hat block to make this happen.
 - Illustrate the use of custom blocks for composition
 - Use custom blocks that take input to control behavior
 - Make use of the random block
