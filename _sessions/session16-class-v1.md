@@ -1,5 +1,5 @@
 ---
-title:  "Session 16"
+title:  "Session 16: Python Exam"
 name:   session16-class-v1
 ---
 
