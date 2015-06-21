@@ -9,6 +9,17 @@ Write code that asks to enter a score (number from 0 to 100) or 'Q to end. Verif
 
 If they did not enter 'Q', store the score in a list.  When they enter 'Q', then say the average of all the values entered, then tell them the letter grade that corresponds to that average score.
 
+For example:
+
+  Computer:  Enter a score from 0-100 or 'Q' to end.
+  Person: 75
+  Person: 110
+  Computer: You must enter a number between 0-100.
+  Person: 80
+  Person: 85
+  Person: Q
+  Computer:  The average is 80. That is a B.
+
 ## Starting Materials
 You have done a letter grade script in the past, but for the rest, start from scratch.
 
