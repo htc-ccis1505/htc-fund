@@ -1,7 +1,7 @@
 ---
 title: More Practice with Lists
 ---
-# Assignment 2:  More Practice with Lists!
+# Assignment 3:  More Practice with Lists!
 Collaboration on this assignment is required.
 
 ## Fun with Data
@@ -9,12 +9,13 @@ Collaboration on this assignment is required.
 ### Do this alone first
 Write code that asks to the user to enter the names of their friends and family.  Tell them to enter a ‘Q’ to indicate they are done.  They should enter both first names and last names.  
 
-Gather this data into a list.  Report back some statistics on the data:
-Report back the first names given and a count of how many people had each name.
-What was the most common first letter in the first names?
-What was the most common last name, and how many people had that last name?  
-What was the longest first name, the longest last name, and the longest overall name.
-How many people had first names and last names that start with the same letter?
+Gather this data into a list.  Report back some statistics on the data (choose 3 of 5):
+
+- Report back the first names given and a count of how many people had each name.
+- What was the most common first letter in the first names?
+- What was the most common last name, and how many people had that last name?  
+- What was the longest first name, the longest last name, and (bonus) the longest overall name.
+- How many people had first names and last names that start with the same letter?
 
 ### Trade with someone else
 Once you have this done, exchange solutions with someone else.  Take a look at how they solved the same problem.  Make notes for your readme file on what is similar and what is different.  Do a written “code review” for your partner, similar to what I have done for grading your assignments and give that feedback to them and include it in the files submitted to the dropbox.  
