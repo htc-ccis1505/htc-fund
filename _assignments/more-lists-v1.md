@@ -11,10 +11,10 @@ Write code that asks to the user to enter the names of their friends and family.
 
 Gather this data into a list.  Report back some statistics on the data (choose 3 of 5):
 
-- Report back the first names given and a count of how many people had each name.
-- What was the most common first letter in the first names?
-- What was the most common last name, and how many people had that last name?  
-- What was the longest first name, the longest last name, and (bonus) the longest overall name.
+- Ask for a letter, then say how many first names started with that letter.  
+- Say all the first names given with a count of how many people had each name.
+- What was the most common first or last name, and how many people had that last name?  
+- What was the longest first name, the longest last name, and the longest overall name.
 - How many people had first names and last names that start with the same letter?
 
 ### Trade with someone else
