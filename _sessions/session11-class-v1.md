@@ -1,5 +1,5 @@
 ---
-title:  "Session 11: (No class for WPO)"
+title:  "Session 11: Recursion (No class for WPO)"
 name:   session11-class-v1
 ---
 
